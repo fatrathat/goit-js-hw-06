@@ -2,9 +2,9 @@ const inputName = document.querySelector("#name-input");
 const outputName = document.querySelector("#name-output");
 
 const enterValue = (event) => {
-  event.target.value === ""
+  event.currentTarget.value === ""
     ? (outputName.textContent = "Anonymous")
-    : (outputName.textContent = event.target.value);
+    : (outputName.textContent = event.currentTarget.value);
 };
 
 inputName.addEventListener("input", enterValue);

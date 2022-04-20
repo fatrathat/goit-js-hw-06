@@ -1,6 +1,9 @@
-const inputSymbols = document.querySelector("#validation-input");
+const validationInput = document.querySelector("#validation-input");
 
-const symbols = (event) => {};
+const checkValidity = (event) => {
+  event.currentTarget.value.length < 6
+    ? (validationInput.className = "invalid")
+    : (validationInput.className = "valid");
+};
 
-inputSymbols.addEventListener("blur", symbols);
-// console.log(event.target.value.length);
+validationInput.addEventListener("blur", checkValidity);

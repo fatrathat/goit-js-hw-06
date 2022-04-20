@@ -4,7 +4,7 @@ const idValue = document.querySelector("#value");
 let counterValue = 0;
 
 const btnClick = (event) => {
-  event.target.dataset.action === "increment"
+  event.currentTarget.dataset.action === "increment"
     ? (counterValue += 1)
     : (counterValue -= 1);
   idValue.textContent = counterValue;
