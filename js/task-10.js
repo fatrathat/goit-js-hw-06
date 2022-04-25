@@ -8,7 +8,8 @@ const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 
 const insertHTMLBox = (width, height) => {
-  boxContainer.insertAdjacentHTML(
+  const div = document.createElement("div");
+  div.insertAdjacentHTML(
     "beforeend",
     `<div style="width: ${width}px; height: ${height}px; background-color:${getRandomHexColor()}"></div>`
   );
@@ -16,6 +17,7 @@ const insertHTMLBox = (width, height) => {
 
 const createBoxes = (amount) => {
   boxContainer.innerHTML = "";
+
   let l = 0;
   for (let i = 1; i <= amount; i++) {
     insertHTMLBox(30 + l, 30 + l);
